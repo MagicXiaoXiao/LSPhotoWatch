@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D0445871E9DF99F004DD687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0445861E9DF99F004DD687 /* AppDelegate.swift */; };
+		1D0445891E9DF99F004DD687 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0445881E9DF99F004DD687 /* ViewController.swift */; };
+		1D04458C1E9DF99F004DD687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D04458A1E9DF99F004DD687 /* Main.storyboard */; };
+		1D04458E1E9DF99F004DD687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D04458D1E9DF99F004DD687 /* Assets.xcassets */; };
+		1D0445911E9DF99F004DD687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D04458F1E9DF99F004DD687 /* LaunchScreen.storyboard */; };
+		1D04459C1E9DF99F004DD687 /* MyPhotoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04459B1E9DF99F004DD687 /* MyPhotoWatchTests.swift */; };
+		1D0445A71E9DF99F004DD687 /* MyPhotoWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1D0445981E9DF99F004DD687 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D04457B1E9DF99F004DD687 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D0445821E9DF99F004DD687;
+			remoteInfo = MyPhotoWatch;
+		};
+		1D0445A31E9DF99F004DD687 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D04457B1E9DF99F004DD687 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D0445821E9DF99F004DD687;
+			remoteInfo = MyPhotoWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D0445831E9DF99F004DD687 /* MyPhotoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPhotoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D0445861E9DF99F004DD687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1D0445881E9DF99F004DD687 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D04458B1E9DF99F004DD687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1D04458D1E9DF99F004DD687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1D0445901E9DF99F004DD687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1D0445921E9DF99F004DD687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D0445971E9DF99F004DD687 /* MyPhotoWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPhotoWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D04459B1E9DF99F004DD687 /* MyPhotoWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoWatchTests.swift; sourceTree = "<group>"; };
+		1D04459D1E9DF99F004DD687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D0445A21E9DF99F004DD687 /* MyPhotoWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPhotoWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoWatchUITests.swift; sourceTree = "<group>"; };
+		1D0445A81E9DF99F004DD687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D0445801E9DF99F004DD687 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D0445941E9DF99F004DD687 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D04459F1E9DF99F004DD687 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1D04457A1E9DF99F004DD687 = {
+			isa = PBXGroup;
+			children = (
+				1D0445851E9DF99F004DD687 /* MyPhotoWatch */,
+				1D04459A1E9DF99F004DD687 /* MyPhotoWatchTests */,
+				1D0445A51E9DF99F004DD687 /* MyPhotoWatchUITests */,
+				1D0445841E9DF99F004DD687 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1D0445841E9DF99F004DD687 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D0445831E9DF99F004DD687 /* MyPhotoWatch.app */,
+				1D0445971E9DF99F004DD687 /* MyPhotoWatchTests.xctest */,
+				1D0445A21E9DF99F004DD687 /* MyPhotoWatchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1D0445851E9DF99F004DD687 /* MyPhotoWatch */ = {
+			isa = PBXGroup;
+			children = (
+				1D0445861E9DF99F004DD687 /* AppDelegate.swift */,
+				1D0445881E9DF99F004DD687 /* ViewController.swift */,
+				1D04458A1E9DF99F004DD687 /* Main.storyboard */,
+				1D04458D1E9DF99F004DD687 /* Assets.xcassets */,
+				1D04458F1E9DF99F004DD687 /* LaunchScreen.storyboard */,
+				1D0445921E9DF99F004DD687 /* Info.plist */,
+			);
+			path = MyPhotoWatch;
+			sourceTree = "<group>";
+		};
+		1D04459A1E9DF99F004DD687 /* MyPhotoWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				1D04459B1E9DF99F004DD687 /* MyPhotoWatchTests.swift */,
+				1D04459D1E9DF99F004DD687 /* Info.plist */,
+			);
+			path = MyPhotoWatchTests;
+			sourceTree = "<group>";
+		};
+		1D0445A51E9DF99F004DD687 /* MyPhotoWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */,
+				1D0445A81E9DF99F004DD687 /* Info.plist */,
+			);
+			path = MyPhotoWatchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D0445821E9DF99F004DD687 /* MyPhotoWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D0445AB1E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatch" */;
+			buildPhases = (
+				1D04457F1E9DF99F004DD687 /* Sources */,
+				1D0445801E9DF99F004DD687 /* Frameworks */,
+				1D0445811E9DF99F004DD687 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyPhotoWatch;
+			productName = MyPhotoWatch;
+			productReference = 1D0445831E9DF99F004DD687 /* MyPhotoWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1D0445961E9DF99F004DD687 /* MyPhotoWatchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D0445AE1E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatchTests" */;
+			buildPhases = (
+				1D0445931E9DF99F004DD687 /* Sources */,
+				1D0445941E9DF99F004DD687 /* Frameworks */,
+				1D0445951E9DF99F004DD687 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D0445991E9DF99F004DD687 /* PBXTargetDependency */,
+			);
+			name = MyPhotoWatchTests;
+			productName = MyPhotoWatchTests;
+			productReference = 1D0445971E9DF99F004DD687 /* MyPhotoWatchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1D0445A11E9DF99F004DD687 /* MyPhotoWatchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D0445B11E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatchUITests" */;
+			buildPhases = (
+				1D04459E1E9DF99F004DD687 /* Sources */,
+				1D04459F1E9DF99F004DD687 /* Frameworks */,
+				1D0445A01E9DF99F004DD687 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1D0445A41E9DF99F004DD687 /* PBXTargetDependency */,
+			);
+			name = MyPhotoWatchUITests;
+			productName = MyPhotoWatchUITests;
+			productReference = 1D0445A21E9DF99F004DD687 /* MyPhotoWatchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1D04457B1E9DF99F004DD687 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "花落知多少";
+				TargetAttributes = {
+					1D0445821E9DF99F004DD687 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = R3834ADD8D;
+						ProvisioningStyle = Automatic;
+					};
+					1D0445961E9DF99F004DD687 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = R3834ADD8D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D0445821E9DF99F004DD687;
+					};
+					1D0445A11E9DF99F004DD687 = {
+						CreatedOnToolsVersion = 8.3.1;
+						DevelopmentTeam = R3834ADD8D;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1D0445821E9DF99F004DD687;
+					};
+				};
+			};
+			buildConfigurationList = 1D04457E1E9DF99F004DD687 /* Build configuration list for PBXProject "MyPhotoWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1D04457A1E9DF99F004DD687;
+			productRefGroup = 1D0445841E9DF99F004DD687 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D0445821E9DF99F004DD687 /* MyPhotoWatch */,
+				1D0445961E9DF99F004DD687 /* MyPhotoWatchTests */,
+				1D0445A11E9DF99F004DD687 /* MyPhotoWatchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D0445811E9DF99F004DD687 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D0445911E9DF99F004DD687 /* LaunchScreen.storyboard in Resources */,
+				1D04458E1E9DF99F004DD687 /* Assets.xcassets in Resources */,
+				1D04458C1E9DF99F004DD687 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D0445951E9DF99F004DD687 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D0445A01E9DF99F004DD687 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D04457F1E9DF99F004DD687 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D0445891E9DF99F004DD687 /* ViewController.swift in Sources */,
+				1D0445871E9DF99F004DD687 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D0445931E9DF99F004DD687 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D04459C1E9DF99F004DD687 /* MyPhotoWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1D04459E1E9DF99F004DD687 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D0445A71E9DF99F004DD687 /* MyPhotoWatchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1D0445991E9DF99F004DD687 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D0445821E9DF99F004DD687 /* MyPhotoWatch */;
+			targetProxy = 1D0445981E9DF99F004DD687 /* PBXContainerItemProxy */;
+		};
+		1D0445A41E9DF99F004DD687 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D0445821E9DF99F004DD687 /* MyPhotoWatch */;
+			targetProxy = 1D0445A31E9DF99F004DD687 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1D04458A1E9DF99F004DD687 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D04458B1E9DF99F004DD687 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1D04458F1E9DF99F004DD687 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1D0445901E9DF99F004DD687 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1D0445A91E9DF99F004DD687 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1D0445AA1E9DF99F004DD687 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1D0445AC1E9DF99F004DD687 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R3834ADD8D;
+				INFOPLIST_FILE = MyPhotoWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceshi.dev.MyPhotoWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1D0445AD1E9DF99F004DD687 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = R3834ADD8D;
+				INFOPLIST_FILE = MyPhotoWatch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceshi.dev.MyPhotoWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1D0445AF1E9DF99F004DD687 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = R3834ADD8D;
+				INFOPLIST_FILE = MyPhotoWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceshi.dev.MyPhotoWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPhotoWatch.app/MyPhotoWatch";
+			};
+			name = Debug;
+		};
+		1D0445B01E9DF99F004DD687 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = R3834ADD8D;
+				INFOPLIST_FILE = MyPhotoWatchTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceshi.dev.MyPhotoWatchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPhotoWatch.app/MyPhotoWatch";
+			};
+			name = Release;
+		};
+		1D0445B21E9DF99F004DD687 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = R3834ADD8D;
+				INFOPLIST_FILE = MyPhotoWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceshi.dev.MyPhotoWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MyPhotoWatch;
+			};
+			name = Debug;
+		};
+		1D0445B31E9DF99F004DD687 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = R3834ADD8D;
+				INFOPLIST_FILE = MyPhotoWatchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ceshi.dev.MyPhotoWatchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = MyPhotoWatch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D04457E1E9DF99F004DD687 /* Build configuration list for PBXProject "MyPhotoWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D0445A91E9DF99F004DD687 /* Debug */,
+				1D0445AA1E9DF99F004DD687 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D0445AB1E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D0445AC1E9DF99F004DD687 /* Debug */,
+				1D0445AD1E9DF99F004DD687 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D0445AE1E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D0445AF1E9DF99F004DD687 /* Debug */,
+				1D0445B01E9DF99F004DD687 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1D0445B11E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D0445B21E9DF99F004DD687 /* Debug */,
+				1D0445B31E9DF99F004DD687 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1D04457B1E9DF99F004DD687 /* Project object */;
+}
