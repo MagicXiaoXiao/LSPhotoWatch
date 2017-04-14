@@ -7,6 +7,7 @@ target 'MyPhotoWatch' do
 
   # Pods for MyPhotoWatch
   pod 'Kingfisher', '~> 3.0'
+  pod 'Hero'
 
   target 'MyPhotoWatchTests' do
     inherit! :search_paths
