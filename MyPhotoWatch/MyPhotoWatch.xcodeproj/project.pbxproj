@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		1D0445871E9DF99F004DD687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0445861E9DF99F004DD687 /* AppDelegate.swift */; };
-		1D0445891E9DF99F004DD687 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0445881E9DF99F004DD687 /* ViewController.swift */; };
 		1D04458C1E9DF99F004DD687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D04458A1E9DF99F004DD687 /* Main.storyboard */; };
 		1D04458E1E9DF99F004DD687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D04458D1E9DF99F004DD687 /* Assets.xcassets */; };
 		1D0445911E9DF99F004DD687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D04458F1E9DF99F004DD687 /* LaunchScreen.storyboard */; };
 		1D04459C1E9DF99F004DD687 /* MyPhotoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04459B1E9DF99F004DD687 /* MyPhotoWatchTests.swift */; };
 		1D0445A71E9DF99F004DD687 /* MyPhotoWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */; };
+		1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 /* Begin PBXFileReference section */
 		1D0445831E9DF99F004DD687 /* MyPhotoWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPhotoWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0445861E9DF99F004DD687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1D0445881E9DF99F004DD687 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1D04458B1E9DF99F004DD687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1D04458D1E9DF99F004DD687 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D0445901E9DF99F004DD687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +46,7 @@
 		1D0445A21E9DF99F004DD687 /* MyPhotoWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPhotoWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoWatchUITests.swift; sourceTree = "<group>"; };
 		1D0445A81E9DF99F004DD687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +97,10 @@
 		1D0445851E9DF99F004DD687 /* MyPhotoWatch */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9C7EA1EA0AA0700A719EF /* ViewController */,
+				1DB9C7E91EA0A9F900A719EF /* View */,
+				1DB9C7E81EA0A9DC00A719EF /* Model */,
 				1D0445861E9DF99F004DD687 /* AppDelegate.swift */,
-				1D0445881E9DF99F004DD687 /* ViewController.swift */,
 				1D04458A1E9DF99F004DD687 /* Main.storyboard */,
 				1D04458D1E9DF99F004DD687 /* Assets.xcassets */,
 				1D04458F1E9DF99F004DD687 /* LaunchScreen.storyboard */,
@@ -123,6 +125,28 @@
 				1D0445A81E9DF99F004DD687 /* Info.plist */,
 			);
 			path = MyPhotoWatchUITests;
+			sourceTree = "<group>";
+		};
+		1DB9C7E81EA0A9DC00A719EF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1DB9C7E91EA0A9F900A719EF /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1DB9C7EA1EA0AA0700A719EF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D0445891E9DF99F004DD687 /* ViewController.swift in Sources */,
 				1D0445871E9DF99F004DD687 /* AppDelegate.swift in Sources */,
+				1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +538,7 @@
 				1D0445AD1E9DF99F004DD687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D0445AE1E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatchTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +547,7 @@
 				1D0445B01E9DF99F004DD687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D0445B11E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatchUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +556,7 @@
 				1D0445B31E9DF99F004DD687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
