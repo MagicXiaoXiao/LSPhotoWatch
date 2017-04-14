@@ -14,6 +14,8 @@
 		1D04459C1E9DF99F004DD687 /* MyPhotoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04459B1E9DF99F004DD687 /* MyPhotoWatchTests.swift */; };
 		1D0445A71E9DF99F004DD687 /* MyPhotoWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */; };
 		1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */; };
+		1DB9C7F01EA0B00D00A719EF /* SmallPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */; };
+		1DB9C7F11EA0B00D00A719EF /* SmallPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoWatchUITests.swift; sourceTree = "<group>"; };
 		1D0445A81E9DF99F004DD687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallPhotoCell.swift; sourceTree = "<group>"; };
+		1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallPhotoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		1DB9C7E91EA0A9F900A719EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1DB9C7ED1EA0AFEF00A719EF /* SmallPhotoCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,6 +152,15 @@
 				1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		1DB9C7ED1EA0AFEF00A719EF /* SmallPhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */,
+				1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */,
+			);
+			path = SmallPhotoCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +275,7 @@
 			files = (
 				1D0445911E9DF99F004DD687 /* LaunchScreen.storyboard in Resources */,
 				1D04458E1E9DF99F004DD687 /* Assets.xcassets in Resources */,
+				1DB9C7F11EA0B00D00A719EF /* SmallPhotoCell.xib in Resources */,
 				1D04458C1E9DF99F004DD687 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +303,7 @@
 			files = (
 				1D0445871E9DF99F004DD687 /* AppDelegate.swift in Sources */,
 				1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */,
+				1DB9C7F01EA0B00D00A719EF /* SmallPhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

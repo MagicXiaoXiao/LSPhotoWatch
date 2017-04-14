@@ -10,7 +10,19 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView! {
+        didSet {
+            collectionView.register(UINib(nibName: "SmallPhotoCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+            
+            if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+                layout.minimumLineSpacing =  scale
+                layout.minimumInteritemSpacing = scale
+                let width = (screenSize.width - layout.minimumInteritemSpacing)/2
+                layout.itemSize = CGSize(width: width, height: width)
+            }
+            
+        }
+    }
 
     let identifier = "PhotoItem"
     let screenSize = UIScreen.main.bounds.size
@@ -19,12 +31,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.minimumLineSpacing =  scale
-            layout.minimumInteritemSpacing = scale
-            let width = (screenSize.width - layout.minimumInteritemSpacing)/2
-            layout.itemSize = CGSize(width: width, height: width)
-        }
+        
     }
 
     override func didReceiveMemoryWarning() {
