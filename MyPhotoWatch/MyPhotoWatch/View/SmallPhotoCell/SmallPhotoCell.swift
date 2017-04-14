@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 class SmallPhotoCell: UICollectionViewCell {
 
-    @IBOutlet weak var mianImageView: UIImageView!
+    @IBOutlet weak var mainImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        mainImageView.contentMode = .scaleAspectFill
+        mainImageView.kf.indicatorType = .activity
     }
 
 }

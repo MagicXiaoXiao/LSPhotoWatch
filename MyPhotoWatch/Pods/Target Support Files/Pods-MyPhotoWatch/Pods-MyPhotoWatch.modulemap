@@ -1,0 +1,6 @@
+framework module Pods_MyPhotoWatch {
+  umbrella header "Pods-MyPhotoWatch-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -16,6 +16,9 @@
 		1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */; };
 		1DB9C7F01EA0B00D00A719EF /* SmallPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */; };
 		1DB9C7F11EA0B00D00A719EF /* SmallPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */; };
+		66A00A1E0A2599DA9A2075D0 /* Pods_MyPhotoWatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5148F5F373976F643900EB22 /* Pods_MyPhotoWatchTests.framework */; };
+		70FE377AA6A6EC3C3751ABF0 /* Pods_MyPhotoWatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739FF16430A612BABF06C740 /* Pods_MyPhotoWatchUITests.framework */; };
+		7AEB3E61DC49097DCE29CEE2 /* Pods_MyPhotoWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0B79AE13B0C79E84BFF776 /* Pods_MyPhotoWatch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,15 @@
 		1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallPhotoCell.swift; sourceTree = "<group>"; };
 		1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallPhotoCell.xib; sourceTree = "<group>"; };
+		5148F5F373976F643900EB22 /* Pods_MyPhotoWatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPhotoWatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B73804D073E0E6D492AC18D /* Pods-MyPhotoWatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoWatchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPhotoWatchTests/Pods-MyPhotoWatchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		614E4E30A926E6DB1F83FA90 /* Pods-MyPhotoWatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoWatchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPhotoWatchTests/Pods-MyPhotoWatchTests.release.xcconfig"; sourceTree = "<group>"; };
+		720D1CB7D9A90309D26E7369 /* Pods-MyPhotoWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPhotoWatch/Pods-MyPhotoWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		739FF16430A612BABF06C740 /* Pods_MyPhotoWatchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPhotoWatchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7801424E3DEBE8D38CE6C657 /* Pods-MyPhotoWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPhotoWatch/Pods-MyPhotoWatch.release.xcconfig"; sourceTree = "<group>"; };
+		B29DA6325D1E28C2AE6C53A3 /* Pods-MyPhotoWatchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoWatchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPhotoWatchUITests/Pods-MyPhotoWatchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD0B79AE13B0C79E84BFF776 /* Pods_MyPhotoWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPhotoWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E45084FCB33FE21743D2FE /* Pods-MyPhotoWatchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoWatchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPhotoWatchUITests/Pods-MyPhotoWatchUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7AEB3E61DC49097DCE29CEE2 /* Pods_MyPhotoWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A00A1E0A2599DA9A2075D0 /* Pods_MyPhotoWatchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70FE377AA6A6EC3C3751ABF0 /* Pods_MyPhotoWatchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				1D04459A1E9DF99F004DD687 /* MyPhotoWatchTests */,
 				1D0445A51E9DF99F004DD687 /* MyPhotoWatchUITests */,
 				1D0445841E9DF99F004DD687 /* Products */,
+				DDB417193890BFED77D75B3C /* Pods */,
+				28700F77DDEA57777CAC895E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +180,29 @@
 			path = SmallPhotoCell;
 			sourceTree = "<group>";
 		};
+		28700F77DDEA57777CAC895E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD0B79AE13B0C79E84BFF776 /* Pods_MyPhotoWatch.framework */,
+				5148F5F373976F643900EB22 /* Pods_MyPhotoWatchTests.framework */,
+				739FF16430A612BABF06C740 /* Pods_MyPhotoWatchUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDB417193890BFED77D75B3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				720D1CB7D9A90309D26E7369 /* Pods-MyPhotoWatch.debug.xcconfig */,
+				7801424E3DEBE8D38CE6C657 /* Pods-MyPhotoWatch.release.xcconfig */,
+				5B73804D073E0E6D492AC18D /* Pods-MyPhotoWatchTests.debug.xcconfig */,
+				614E4E30A926E6DB1F83FA90 /* Pods-MyPhotoWatchTests.release.xcconfig */,
+				B29DA6325D1E28C2AE6C53A3 /* Pods-MyPhotoWatchUITests.debug.xcconfig */,
+				E5E45084FCB33FE21743D2FE /* Pods-MyPhotoWatchUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D0445AB1E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatch" */;
 			buildPhases = (
+				72AEEF9F909AC33445EF1DF6 /* [CP] Check Pods Manifest.lock */,
 				1D04457F1E9DF99F004DD687 /* Sources */,
 				1D0445801E9DF99F004DD687 /* Frameworks */,
 				1D0445811E9DF99F004DD687 /* Resources */,
+				C09B5B622DB008C57EFEE847 /* [CP] Embed Pods Frameworks */,
+				69815C472EC14137D0E3E5EC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D0445AE1E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatchTests" */;
 			buildPhases = (
+				3F7C961A409C7EBA59FD6C7B /* [CP] Check Pods Manifest.lock */,
 				1D0445931E9DF99F004DD687 /* Sources */,
 				1D0445941E9DF99F004DD687 /* Frameworks */,
 				1D0445951E9DF99F004DD687 /* Resources */,
+				999740A548E47D54DA41BD58 /* [CP] Embed Pods Frameworks */,
+				D770355EF8AD2029F0BBA7BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D0445B11E9DF99F004DD687 /* Build configuration list for PBXNativeTarget "MyPhotoWatchUITests" */;
 			buildPhases = (
+				A5640631C2CB7D068D546BB0 /* [CP] Check Pods Manifest.lock */,
 				1D04459E1E9DF99F004DD687 /* Sources */,
 				1D04459F1E9DF99F004DD687 /* Frameworks */,
 				1D0445A01E9DF99F004DD687 /* Resources */,
+				8966708356299765F97672CB /* [CP] Embed Pods Frameworks */,
+				21335314BD86446747B85000 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,6 +344,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21335314BD86446747B85000 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyPhotoWatchUITests/Pods-MyPhotoWatchUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F7C961A409C7EBA59FD6C7B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69815C472EC14137D0E3E5EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyPhotoWatch/Pods-MyPhotoWatch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72AEEF9F909AC33445EF1DF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8966708356299765F97672CB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyPhotoWatchUITests/Pods-MyPhotoWatchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		999740A548E47D54DA41BD58 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyPhotoWatchTests/Pods-MyPhotoWatchTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5640631C2CB7D068D546BB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C09B5B622DB008C57EFEE847 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyPhotoWatch/Pods-MyPhotoWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D770355EF8AD2029F0BBA7BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyPhotoWatchTests/Pods-MyPhotoWatchTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D04457F1E9DF99F004DD687 /* Sources */ = {
@@ -453,6 +640,7 @@
 		};
 		1D0445AC1E9DF99F004DD687 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 720D1CB7D9A90309D26E7369 /* Pods-MyPhotoWatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R3834ADD8D;
@@ -466,6 +654,7 @@
 		};
 		1D0445AD1E9DF99F004DD687 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7801424E3DEBE8D38CE6C657 /* Pods-MyPhotoWatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = R3834ADD8D;
@@ -479,6 +668,7 @@
 		};
 		1D0445AF1E9DF99F004DD687 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B73804D073E0E6D492AC18D /* Pods-MyPhotoWatchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -494,6 +684,7 @@
 		};
 		1D0445B01E9DF99F004DD687 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 614E4E30A926E6DB1F83FA90 /* Pods-MyPhotoWatchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -509,6 +700,7 @@
 		};
 		1D0445B21E9DF99F004DD687 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B29DA6325D1E28C2AE6C53A3 /* Pods-MyPhotoWatchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = R3834ADD8D;
@@ -523,6 +715,7 @@
 		};
 		1D0445B31E9DF99F004DD687 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E45084FCB33FE21743D2FE /* Pods-MyPhotoWatchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = R3834ADD8D;
