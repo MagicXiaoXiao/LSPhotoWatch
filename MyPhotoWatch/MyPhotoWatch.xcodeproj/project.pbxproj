@@ -16,6 +16,7 @@
 		1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */; };
 		1DB9C7F01EA0B00D00A719EF /* SmallPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */; };
 		1DB9C7F11EA0B00D00A719EF /* SmallPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */; };
+		1DB9C7F31EA0BFFE00A719EF /* BigPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7F21EA0BFFE00A719EF /* BigPhotoViewController.swift */; };
 		66A00A1E0A2599DA9A2075D0 /* Pods_MyPhotoWatchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5148F5F373976F643900EB22 /* Pods_MyPhotoWatchTests.framework */; };
 		70FE377AA6A6EC3C3751ABF0 /* Pods_MyPhotoWatchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739FF16430A612BABF06C740 /* Pods_MyPhotoWatchUITests.framework */; };
 		7AEB3E61DC49097DCE29CEE2 /* Pods_MyPhotoWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0B79AE13B0C79E84BFF776 /* Pods_MyPhotoWatch.framework */; };
@@ -54,6 +55,7 @@
 		1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallPhotoCell.swift; sourceTree = "<group>"; };
 		1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallPhotoCell.xib; sourceTree = "<group>"; };
+		1DB9C7F21EA0BFFE00A719EF /* BigPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigPhotoViewController.swift; sourceTree = "<group>"; };
 		5148F5F373976F643900EB22 /* Pods_MyPhotoWatchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPhotoWatchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B73804D073E0E6D492AC18D /* Pods-MyPhotoWatchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoWatchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyPhotoWatchTests/Pods-MyPhotoWatchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		614E4E30A926E6DB1F83FA90 /* Pods-MyPhotoWatchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPhotoWatchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyPhotoWatchTests/Pods-MyPhotoWatchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */,
+				1DB9C7F21EA0BFFE00A719EF /* BigPhotoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -490,6 +493,7 @@
 			files = (
 				1D0445871E9DF99F004DD687 /* AppDelegate.swift in Sources */,
 				1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */,
+				1DB9C7F31EA0BFFE00A719EF /* BigPhotoViewController.swift in Sources */,
 				1DB9C7F01EA0B00D00A719EF /* SmallPhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,6 +653,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ceshi.dev.MyPhotoWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -663,6 +668,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ceshi.dev.MyPhotoWatch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

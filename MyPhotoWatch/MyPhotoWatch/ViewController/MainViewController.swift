@@ -88,6 +88,12 @@ extension MainViewController: UICollectionViewDelegate {
                 completionHandler: nil)
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? SmallPhotoCell else { return }
+        cell.mainImageView.kf.cancelDownloadTask()
+    }
+    
 }
 
 

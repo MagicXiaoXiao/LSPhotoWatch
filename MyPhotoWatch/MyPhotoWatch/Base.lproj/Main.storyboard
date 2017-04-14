@@ -54,11 +54,44 @@
                     <navigationItem key="navigationItem" title="图片查看" id="8Cq-bd-rdA"/>
                     <connections>
                         <outlet property="collectionView" destination="qBm-7S-QGY" id="tQc-K6-sam"/>
+                        <segue destination="56C-gI-sRQ" kind="presentation" identifier="toBigPhoto" id="nEl-OV-Z3r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Big Photo View Controller-->
+        <scene sceneID="vkc-3V-OdV">
+            <objects>
+                <viewController id="56C-gI-sRQ" customClass="BigPhotoViewController" customModule="MyPhotoWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TsR-4u-a2J"/>
+                        <viewControllerLayoutGuide type="bottom" id="0zF-dj-YAI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N6k-vO-aWj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VY-Uh-S50">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7VY-Uh-S50" firstAttribute="top" secondItem="N6k-vO-aWj" secondAttribute="top" id="AhE-sw-mYo"/>
+                            <constraint firstAttribute="trailing" secondItem="7VY-Uh-S50" secondAttribute="trailing" id="Ks6-4y-UDg"/>
+                            <constraint firstItem="0zF-dj-YAI" firstAttribute="top" secondItem="7VY-Uh-S50" secondAttribute="bottom" id="ezR-oQ-rFY"/>
+                            <constraint firstItem="7VY-Uh-S50" firstAttribute="leading" secondItem="N6k-vO-aWj" secondAttribute="leading" id="lQn-Q2-hff"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="7VY-Uh-S50" id="UQR-Ws-pU1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ6-hx-Rm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>
