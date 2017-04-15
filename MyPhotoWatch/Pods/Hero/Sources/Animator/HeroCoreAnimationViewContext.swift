@@ -40,13 +40,16 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
       state.cornerRadius != nil ||
       state.opacity != nil ||
       state.overlay != nil ||
+      state.backgroundColor != nil ||
       state.borderColor != nil ||
       state.borderWidth != nil ||
       state.shadowOpacity != nil ||
       state.shadowRadius != nil ||
       state.shadowOffset != nil ||
       state.shadowColor != nil ||
-      state.shadowPath != nil
+      state.shadowPath != nil ||
+      state.contentsRect != nil ||
+      state.forceAnimate
   }
 
   func getOverlayLayer() -> CALayer {
@@ -128,10 +131,11 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
       getOverlayLayer().add(anim, forKey: overlayKey)
     } else {
       snapshot.layer.add(anim, forKey: key)
-      if key == "cornerRadius" {
+      switch key {
+      case "cornerRadius", "contentsRect", "contentsScale":
         contentLayer?.add(anim, forKey: key)
         overlayLayer?.add(anim, forKey: key)
-      } else if key == "bounds.size" {
+      case "bounds.size":
         let fromSize = (fromValue as? NSValue)!.cgSizeValue
         let toSize = (toValue as? NSValue)!.cgSizeValue
 
@@ -153,6 +157,7 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
 
         overlayLayer?.add(positionAnim, forKey: "position")
         overlayLayer?.add(anim, forKey: key)
+      default: break
       }
     }
 
@@ -163,11 +168,8 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
     if let tf = targetState.timingFunction {
       timingFunction = tf
     }
-    if let d = targetState.duration {
-      duration = d
-    } else {
-      duration = snapshot.optimizedDuration(targetState: targetState)
-    }
+
+    duration = targetState.duration!
 
     let beginTime = currentTime + delay
     var finalDuration: TimeInterval = duration
@@ -204,6 +206,9 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
     if let cornerRadius = targetState.cornerRadius {
       rtn["cornerRadius"] = NSNumber(value: cornerRadius.native)
     }
+    if let backgroundColor = targetState.backgroundColor {
+      rtn["backgroundColor"] = backgroundColor
+    }
     if let zPosition = targetState.zPosition {
       rtn["zPosition"] = NSNumber(value: zPosition.native)
     }
@@ -236,6 +241,14 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
       }
     }
 
+    if let contentsRect = targetState.contentsRect {
+      rtn["contentsRect"] = NSValue(cgRect: contentsRect)
+    }
+
+    if let contentsScale = targetState.contentsScale {
+      rtn["contentsScale"] = NSNumber(value: contentsScale.native)
+    }
+
     if let transform = targetState.transform {
       rtn["transform"] = NSValue(caTransform3D: transform)
     }
@@ -256,13 +269,6 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
       }
       let _ = animate(key: key, beginTime: 0, fromValue: targetValue, toValue: targetValue)
     }
-
-    // support changing duration
-    if let duration = state.duration {
-      self.targetState.duration = duration
-      self.duration = duration
-      animate(delay: self.targetState.delay - Hero.shared.progress * Hero.shared.totalDuration)
-    }
   }
 
   override func resume(timePassed: TimeInterval, reverse: Bool) {
@@ -271,6 +277,9 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
       let realFromValue = currentValue(key: key)
       state[key] = (realFromValue, realToValue)
     }
+
+    // we need to update the duration to reflect current state
+    targetState.duration = reverse ? timePassed - targetState.delay : duration - timePassed
 
     let realDelay = max(0, targetState.delay - timePassed)
     animate(delay: realDelay)
@@ -298,8 +307,6 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
 
   override func clean() {
     super.clean()
-    contentLayer?.removeAllAnimations()
-    overlayLayer?.removeFromSuperlayer()
     overlayLayer = nil
   }
 
@@ -310,9 +317,9 @@ internal class HeroCoreAnimationViewContext: HeroAnimatorViewContext {
         snapshot.layer.setValue(value, forKeyPath: key)
       }
       if let (color, opacity) = beginState.overlay {
-        overlayLayer = getOverlayLayer()
-        overlayLayer!.backgroundColor = color
-        overlayLayer!.opacity = Float(opacity)
+        let overlay = getOverlayLayer()
+        overlay.backgroundColor = color
+        overlay.opacity = Float(opacity)
       }
     }
 

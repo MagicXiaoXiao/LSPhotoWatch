@@ -76,12 +76,24 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7VY-Uh-S50">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4b-L2-3aS">
+                                <rect key="frame" x="300" y="617" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="PaT-m0-Ifv"/>
+                                </constraints>
+                                <state key="normal" title="关闭"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="56C-gI-sRQ" eventType="touchUpInside" id="ibt-uu-GVC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="7VY-Uh-S50" firstAttribute="top" secondItem="N6k-vO-aWj" secondAttribute="top" id="AhE-sw-mYo"/>
                             <constraint firstAttribute="trailing" secondItem="7VY-Uh-S50" secondAttribute="trailing" id="Ks6-4y-UDg"/>
+                            <constraint firstItem="0zF-dj-YAI" firstAttribute="top" secondItem="v4b-L2-3aS" secondAttribute="bottom" constant="20" id="VB4-rK-DsY"/>
                             <constraint firstItem="0zF-dj-YAI" firstAttribute="top" secondItem="7VY-Uh-S50" secondAttribute="bottom" id="ezR-oQ-rFY"/>
+                            <constraint firstAttribute="trailing" secondItem="v4b-L2-3aS" secondAttribute="trailing" constant="15" id="kTD-zk-VA8"/>
                             <constraint firstItem="7VY-Uh-S50" firstAttribute="leading" secondItem="N6k-vO-aWj" secondAttribute="leading" id="lQn-Q2-hff"/>
                         </constraints>
                     </view>

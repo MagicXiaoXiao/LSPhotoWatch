@@ -23,13 +23,17 @@
 import UIKit
 
 internal extension UIView {
-  func optimizedDuration(targetState state: HeroTargetState) -> TimeInterval {
+  func optimizedDuration(targetState: HeroTargetState) -> TimeInterval {
+    return optimizedDurationTo(position: targetState.position, size: targetState.size, transform: targetState.transform)
+  }
+
+  func optimizedDurationTo(position: CGPoint?, size: CGSize?, transform: CATransform3D?) -> TimeInterval {
     let fromPos = (layer.presentation() ?? layer).position
-    let toPos = state.position ?? fromPos
+    let toPos = position ?? fromPos
     let fromSize = (layer.presentation() ?? layer).bounds.size
-    let toSize = state.size ?? fromSize
+    let toSize = size ?? fromSize
     let fromTransform = (layer.presentation() ?? layer).transform
-    let toTransform = state.transform ?? fromTransform
+    let toTransform = transform ?? fromTransform
 
     let realFromPos = CGPoint.zero.transform(fromTransform) + fromPos
     let realToPos = CGPoint.zero.transform(toTransform) + toPos
@@ -78,26 +82,11 @@ internal class HeroDefaultAnimator<ViewContext>: HeroAnimator where ViewContext:
   public func animate(fromViews: [UIView], toViews: [UIView]) -> TimeInterval {
     var duration: TimeInterval = 0
 
-    // animate
     for v in fromViews { animate(view: v, appearing: false) }
     for v in toViews { animate(view: v, appearing: true) }
 
-    // infinite duration means matching the duration of the longest animation
-    var infiniteDurationViewContexts = [ViewContext]()
     for viewContext in viewContexts.values {
-      if viewContext.duration == .infinity {
-        infiniteDurationViewContexts.append(viewContext)
-      } else {
-        duration = max(duration, viewContext.duration)
-      }
-    }
-
-    for viewContext in infiniteDurationViewContexts {
-      duration = max(duration, viewContext.snapshot.optimizedDuration(targetState: viewContext.targetState))
-    }
-
-    for viewContext in infiniteDurationViewContexts {
-      viewContext.apply(state: [.duration(duration)])
+      duration = max(duration, viewContext.duration)
     }
 
     return duration

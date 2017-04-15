@@ -22,48 +22,44 @@
 
 import UIKit
 
-internal extension Array {
-  func get(_ index: Int) -> Element? {
-    if index < count {
-      return self[index]
-    }
-    return nil
+internal class HeroAnimatorViewContext {
+  var animator: HeroAnimator?
+  var snapshot: UIView
+  var duration: TimeInterval = 0
+
+  var targetState: HeroTargetState
+
+  // computed
+  var currentTime: TimeInterval {
+    return snapshot.layer.convertTime(CACurrentMediaTime(), from: nil)
   }
-  func getCGFloat(_ index: Int) -> CGFloat? {
-    if let s = get(index) as? String, let f = Float(s) {
-      return CGFloat(f)
-    }
-    return nil
-  }
-  func getDouble(_ index: Int) -> Double? {
-    if let s = get(index) as? String, let f = Double(s) {
-      return f
-    }
-    return nil
-  }
-  func getFloat(_ index: Int) -> Float? {
-    if let s = get(index) as? String, let f = Float(s) {
-      return f
-    }
-    return nil
-  }
-  func getBool(_ index: Int) -> Bool? {
-    if let s = get(index) as? String, let f = Bool(s) {
-      return f
-    }
-    return nil
+  var container: UIView? {
+    return animator?.context.container
   }
 
-  mutating func filterInPlace(_ comparator: (Element) -> Bool) -> [Element] {
-    var array2: [Element] = []
-    self = self.filter { (element) -> Bool in
-      if comparator(element) {
-        return true
-      } else {
-        array2.append(element)
-        return false
-      }
-    }
-    return array2
+  class func canAnimate(view: UIView, state: HeroTargetState, appearing: Bool) -> Bool {
+    return false
+  }
+
+  func apply(state: HeroTargetState) {
+  }
+
+  func resume(timePassed: TimeInterval, reverse: Bool) {
+  }
+
+  func seek(timePassed: TimeInterval) {
+  }
+
+  func clean() {
+    animator = nil
+  }
+
+  func startAnimations(appearing: Bool) {
+  }
+
+  required init(animator: HeroAnimator, snapshot: UIView, targetState: HeroTargetState) {
+    self.animator = animator
+    self.snapshot = snapshot
+    self.targetState = targetState
   }
 }

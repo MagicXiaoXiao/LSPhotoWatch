@@ -23,7 +23,7 @@
 import UIKit
 
 #if os(iOS)
-protocol HeroDebugViewDelegate {
+protocol HeroDebugViewDelegate: class {
   func onProcessSliderChanged(progress: Float)
   func onPerspectiveChanged(translation: CGPoint, rotation: CGFloat, scale: CGFloat)
   func on3D(wants3D: Bool)
@@ -38,7 +38,7 @@ class HeroDebugView: UIView {
   var doneButton: UIButton!
   var arcCurveButton: UIButton?
 
-  var delegate: HeroDebugViewDelegate?
+  weak var delegate: HeroDebugViewDelegate?
   var panGR: UIPanGestureRecognizer!
 
   var pinchGR: UIPinchGestureRecognizer!
@@ -50,7 +50,7 @@ class HeroDebugView: UIView {
   }
 
   var showOnTop: Bool = false
-  var rotation: CGFloat = CGFloat(M_PI / 6)
+  var rotation: CGFloat = π / 6
   var scale: CGFloat = 0.6
   var translation: CGPoint = .zero
   var progress: Float {
@@ -139,10 +139,10 @@ class HeroDebugView: UIView {
       startRotation = rotation
     }
     rotation = startRotation + panGR.translation(in: nil).x / 150
-    if rotation > CGFloat(M_PI) {
-      rotation -= CGFloat(2 * M_PI)
-    } else if rotation < -CGFloat(M_PI) {
-      rotation += CGFloat(2 * M_PI)
+    if rotation > π {
+      rotation -= 2 * π
+    } else if rotation < -π {
+      rotation += 2 * π
     }
     delegate?.onPerspectiveChanged(translation:translation, rotation: rotation, scale:scale)
   }

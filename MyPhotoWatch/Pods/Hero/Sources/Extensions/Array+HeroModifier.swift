@@ -22,45 +22,38 @@
 
 import UIKit
 
-internal class HeroAnimatorViewContext {
-  var animator: HeroAnimator?
-  var snapshot: UIView
-  var duration: TimeInterval = 0
-
-  var targetState: HeroTargetState
-
-  // computed
-  var currentTime: TimeInterval {
-    return snapshot.layer.convertTime(CACurrentMediaTime(), from: nil)
+internal extension Array {
+  func get(_ index: Int) -> Element? {
+    if index < count {
+      return self[index]
+    }
+    return nil
   }
-  var container: UIView? {
-    return animator?.context.container
-  }
+}
 
-  class func canAnimate(view: UIView, state: HeroTargetState, appearing: Bool) -> Bool {
-    return false
+internal extension Array where Element: ExprNode {
+  func getCGFloat(_ index: Int) -> CGFloat? {
+    if let s = get(index) as? NumberNode {
+      return CGFloat(s.value)
+    }
+    return nil
   }
-
-  func apply(state: HeroTargetState) {
+  func getDouble(_ index: Int) -> Double? {
+    if let s = get(index) as? NumberNode {
+      return Double(s.value)
+    }
+    return nil
   }
-
-  func resume(timePassed: TimeInterval, reverse: Bool) {
+  func getFloat(_ index: Int) -> Float? {
+    if let s = get(index) as? NumberNode {
+      return s.value
+    }
+    return nil
   }
-
-  func seek(timePassed: TimeInterval) {
-  }
-
-  func clean() {
-    snapshot.layer.removeAllAnimations()
-    animator = nil
-  }
-
-  func startAnimations(appearing: Bool) {
-  }
-
-  required init(animator: HeroAnimator, snapshot: UIView, targetState: HeroTargetState) {
-    self.animator = animator
-    self.snapshot = snapshot
-    self.targetState = targetState
+  func getBool(_ index: Int) -> Bool? {
+    if let s = get(index) as? VariableNode, let f = Bool(s.name) {
+      return f
+    }
+    return nil
   }
 }
