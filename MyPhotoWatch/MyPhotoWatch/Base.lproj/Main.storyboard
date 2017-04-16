@@ -54,11 +54,64 @@
                     <navigationItem key="navigationItem" title="图片查看" id="8Cq-bd-rdA"/>
                     <connections>
                         <outlet property="collectionView" destination="qBm-7S-QGY" id="tQc-K6-sam"/>
+                        <segue destination="56C-gI-sRQ" kind="presentation" identifier="toBigPhoto" id="nEl-OV-Z3r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Big Photo View Controller-->
+        <scene sceneID="vkc-3V-OdV">
+            <objects>
+                <viewController id="56C-gI-sRQ" customClass="BigPhotoViewController" customModule="MyPhotoWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TsR-4u-a2J"/>
+                        <viewControllerLayoutGuide type="bottom" id="0zF-dj-YAI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="N6k-vO-aWj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LVZ-ch-c0h">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q7t-Ds-PCh">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wS-9R-LTz">
+                                <rect key="frame" x="313" y="617" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="dQI-Vj-G42"/>
+                                </constraints>
+                                <state key="normal" title="关闭"/>
+                                <connections>
+                                    <action selector="dismissAction:" destination="56C-gI-sRQ" eventType="touchUpInside" id="5Lu-rG-PZP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0zF-dj-YAI" firstAttribute="top" secondItem="5wS-9R-LTz" secondAttribute="bottom" constant="20" id="55j-0O-YQM"/>
+                            <constraint firstItem="LVZ-ch-c0h" firstAttribute="leading" secondItem="N6k-vO-aWj" secondAttribute="leading" id="E2g-ag-yJY"/>
+                            <constraint firstAttribute="trailing" secondItem="5wS-9R-LTz" secondAttribute="trailing" constant="16" id="L1h-dW-XeB"/>
+                            <constraint firstItem="0zF-dj-YAI" firstAttribute="top" secondItem="LVZ-ch-c0h" secondAttribute="bottom" id="Tp3-uY-j26"/>
+                            <constraint firstItem="LVZ-ch-c0h" firstAttribute="top" secondItem="N6k-vO-aWj" secondAttribute="top" id="aiU-PG-INI"/>
+                            <constraint firstAttribute="trailing" secondItem="LVZ-ch-c0h" secondAttribute="trailing" id="xCD-V0-lWw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="LVZ-ch-c0h" id="f5O-fe-ISZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ6-hx-Rm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

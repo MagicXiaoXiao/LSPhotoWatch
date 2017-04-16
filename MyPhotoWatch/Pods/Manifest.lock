@@ -1,12 +1,15 @@
 PODS:
-  - Kingfisher (3.4.0)
+  - Hero (0.3.6)
+  - Kingfisher (3.6.2)
 
 DEPENDENCIES:
+  - Hero
   - Kingfisher (~> 3.0)
 
 SPEC CHECKSUMS:
-  Kingfisher: 5690cfb3d1bddf3a98d679a3a34d0b7294974ed2
+  Hero: d3c6f4dd80cdcdbb339be64e57ae3b5c3ab9938c
+  Kingfisher: 2c94e72c6830622c71d06adf4ea024c37d316830
 
-PODFILE CHECKSUM: c712f3b976be47b29b06e4d8acb78c7d6ff6faf4
+PODFILE CHECKSUM: ec4c3ca875ea4443a0367be85cae8063858fd961
 
 COCOAPODS: 1.2.0.beta.1

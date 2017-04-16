@@ -8,12 +8,15 @@
 
 import UIKit
 import Kingfisher
+import Hero
 
 class MainViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.register(UINib(nibName: "SmallPhotoCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+            collectionView.dataSource = self
+            collectionView.delegate = self
             if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                 layout.minimumLineSpacing =  scale
                 layout.minimumInteritemSpacing = scale
@@ -35,14 +38,14 @@ class MainViewController: UIViewController {
                      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492167166551&di=ce905c6efd3ccc4403ce8e1cb2f9fb7d&imgtype=0&src=http%3A%2F%2Fi3.hexunimg.cn%2F2016-09-28%2F186224738.jpg",
                      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492167200707&di=fffa5fb731fbe265dae9733f2c491528&imgtype=0&src=http%3A%2F%2Fh6.86.cc%2Fwalls%2F20160721%2Fmid_bdaee2a345fd80d.jpg",
                      "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492167219159&di=e408ea967b2769538ad7e3c6bacf51e6&imgtype=0&src=http%3A%2F%2Fh5.86.cc%2Fwalls%2F20160708%2Fmid_eb33900cc93f31e.jpg",
-                     "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492167255337&di=1ddfdb1dafd69109c41ac3636756fc68&imgtype=0&src=http%3A%2F%2Fv1.qzone.cc%2Fskin%2F201608%2F27%2F09%2F05%2F57c0e747bc465901.png%2521600x600.jpg"]
+                     "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492167255337&di=1ddfdb1dafd69109c41ac3636756fc68&imgtype=0&src=http%3A%2F%2Fv1.qzone.cc%2Fskin%2F201608%2F27%2F09%2F05%2F57c0e747bc465901.png%2521600x600.jpg",
+                     "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1492174593180&di=d745fc5ea6ed4ab89f9573437cbaeeff&imgtype=0&src=http%3A%2F%2Fimage.tianjimedia.com%2FuploadImages%2F2014%2F064%2F81G4I26G152L_1000x500.jpg"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.delegate = self
         KingfisherManager.shared.cache.clearDiskCache()
+        isHeroEnabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,15 +53,21 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "toBigPhoto" {
+            if let vc = segue.destination as? BigPhotoViewController {
+                vc.testArray = testArray
+                vc.currentIndexPath = sender as! IndexPath
+            }
+        }
     }
-    */
+ 
 }
 
 extension MainViewController: UICollectionViewDataSource {
@@ -70,24 +79,38 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
-        
+        if let cell = cell as? SmallPhotoCell {
+            cell.mainImageView.heroID = "P\(indexPath.row)"
+        }
         return cell
     }
     
 }
 
 extension MainViewController: UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
         if let cell = cell as? SmallPhotoCell {
             cell.mainImageView.kf.setImage(
                 with: URL(string: testArray[indexPath.row]),
                 placeholder: nil,
                 options: [.transition(.fade(1))],
                 progressBlock: nil,
-                completionHandler: nil)
+                completionHandler: { (image, error, cache, url) in
+                    
+            })
         }
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? SmallPhotoCell else { return }
+        cell.mainImageView.kf.cancelDownloadTask()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toBigPhoto", sender: indexPath)
+    }
+    
 }
 
 
