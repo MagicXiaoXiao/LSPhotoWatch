@@ -8,12 +8,15 @@
 
 import UIKit
 import Kingfisher
+import Hero
 
 class MainViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView! {
         didSet {
             collectionView.register(UINib(nibName: "SmallPhotoCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+            collectionView.dataSource = self
+            collectionView.delegate = self
             if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
                 layout.minimumLineSpacing =  scale
                 layout.minimumInteritemSpacing = scale
@@ -41,9 +44,8 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.dataSource = self
-        collectionView.delegate = self
         KingfisherManager.shared.cache.clearDiskCache()
+        isHeroEnabled = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -60,7 +62,8 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "toBigPhoto" {
             if let vc = segue.destination as? BigPhotoViewController {
-                vc.imgUrl = sender as? String
+                vc.testArray = testArray
+                vc.currentIndexPath = sender as! IndexPath
             }
         }
     }
@@ -76,7 +79,9 @@ extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath)
-        
+        if let cell = cell as? SmallPhotoCell {
+            cell.mainImageView.heroID = "P\(indexPath.row)"
+        }
         return cell
     }
     
@@ -103,7 +108,7 @@ extension MainViewController: UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "toBigPhoto", sender: testArray[indexPath.row])
+        performSegue(withIdentifier: "toBigPhoto", sender: indexPath)
     }
     
 }

@@ -13,6 +13,8 @@
 		1D0445911E9DF99F004DD687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D04458F1E9DF99F004DD687 /* LaunchScreen.storyboard */; };
 		1D04459C1E9DF99F004DD687 /* MyPhotoWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D04459B1E9DF99F004DD687 /* MyPhotoWatchTests.swift */; };
 		1D0445A71E9DF99F004DD687 /* MyPhotoWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */; };
+		1D983EFD1EA363C900ABEAC6 /* BigPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D983EFB1EA363C900ABEAC6 /* BigPhotoCell.swift */; };
+		1D983EFE1EA363C900ABEAC6 /* BigPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D983EFC1EA363C900ABEAC6 /* BigPhotoCell.xib */; };
 		1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */; };
 		1DB9C7F01EA0B00D00A719EF /* SmallPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */; };
 		1DB9C7F11EA0B00D00A719EF /* SmallPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */; };
@@ -52,6 +54,8 @@
 		1D0445A21E9DF99F004DD687 /* MyPhotoWatchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPhotoWatchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0445A61E9DF99F004DD687 /* MyPhotoWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoWatchUITests.swift; sourceTree = "<group>"; };
 		1D0445A81E9DF99F004DD687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D983EFB1EA363C900ABEAC6 /* BigPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BigPhotoCell.swift; sourceTree = "<group>"; };
+		1D983EFC1EA363C900ABEAC6 /* BigPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BigPhotoCell.xib; sourceTree = "<group>"; };
 		1DB9C7EB1EA0AA5800A719EF /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1DB9C7EE1EA0B00D00A719EF /* SmallPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmallPhotoCell.swift; sourceTree = "<group>"; };
 		1DB9C7EF1EA0B00D00A719EF /* SmallPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SmallPhotoCell.xib; sourceTree = "<group>"; };
@@ -150,6 +154,15 @@
 			path = MyPhotoWatchUITests;
 			sourceTree = "<group>";
 		};
+		1D983EFA1EA3638B00ABEAC6 /* BigPhotoCell */ = {
+			isa = PBXGroup;
+			children = (
+				1D983EFB1EA363C900ABEAC6 /* BigPhotoCell.swift */,
+				1D983EFC1EA363C900ABEAC6 /* BigPhotoCell.xib */,
+			);
+			path = BigPhotoCell;
+			sourceTree = "<group>";
+		};
 		1DB9C7E81EA0A9DC00A719EF /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +173,7 @@
 		1DB9C7E91EA0A9F900A719EF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1D983EFA1EA3638B00ABEAC6 /* BigPhotoCell */,
 				1DB9C7ED1EA0AFEF00A719EF /* SmallPhotoCell */,
 			);
 			path = View;
@@ -325,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D983EFE1EA363C900ABEAC6 /* BigPhotoCell.xib in Resources */,
 				1D0445911E9DF99F004DD687 /* LaunchScreen.storyboard in Resources */,
 				1D04458E1E9DF99F004DD687 /* Assets.xcassets in Resources */,
 				1DB9C7F11EA0B00D00A719EF /* SmallPhotoCell.xib in Resources */,
@@ -495,6 +510,7 @@
 				1DB9C7EC1EA0AA5800A719EF /* MainViewController.swift in Sources */,
 				1DB9C7F31EA0BFFE00A719EF /* BigPhotoViewController.swift in Sources */,
 				1DB9C7F01EA0B00D00A719EF /* SmallPhotoCell.swift in Sources */,
+				1D983EFD1EA363C900ABEAC6 /* BigPhotoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

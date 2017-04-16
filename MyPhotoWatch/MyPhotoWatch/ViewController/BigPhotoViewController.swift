@@ -7,70 +7,38 @@
 //
 
 import UIKit
+import Hero
 
 class BigPhotoViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!{
+    var testArray: [String]?
+    var currentIndexPath: IndexPath = IndexPath(item: 0, section: 0)
+    
+    @IBOutlet weak var collectionView: UICollectionView!{
         didSet {
-            scrollView.showsVerticalScrollIndicator = false
-            scrollView.showsHorizontalScrollIndicator = false
-            scrollView.bouncesZoom = true
-            scrollView.minimumZoomScale = 1
+            collectionView.register(UINib(nibName: "BigPhotoCell", bundle: nil), forCellWithReuseIdentifier: "PhotoCell")
+            collectionView.showsVerticalScrollIndicator = false
+            collectionView.showsHorizontalScrollIndicator = false
+            collectionView.isPagingEnabled = true
+            collectionView.dataSource = self
+            collectionView.delegate = self
         }
     }
-    
-    lazy var imageView: UIImageView = {
-        let imgView = UIImageView()
-        imgView.clipsToBounds = true
-        return imgView
-    }()
-    
-    var imgUrl: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        scrollView.delegate = self
-        scrollView.addSubview(imageView)
+        isHeroEnabled = true
         
-        if let imgUrlString = imgUrl {
-            imageView.kf.setImage(with: URL(string: imgUrlString), placeholder: nil, options: nil, progressBlock: nil, completionHandler: { (image, error, cacheType, url) in
-                guard let image = image else { return }
-                self.updateImageRect(image: image)
-            })
+        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .horizontal
+            layout.minimumInteritemSpacing = 0
+            layout.minimumLineSpacing = 0
+            layout.itemSize = collectionView.bounds.size
         }
+        collectionView.scrollToItem(at: currentIndexPath, at: .left, animated: false)
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-//    var scaleOriginRect: CGRect?
-    
-    func updateImageRect(image: UIImage) -> Void {
-        imageView.image = image
-        let imgSize = image.size
-        //判断首先缩放的值
-        let scaleX = scrollView.frame.size.width / imgSize.width
-        let scaleY = scrollView.frame.size.height / imgSize.height
-        
-        if scaleX > scaleY {
-            //Y方向先到边缘
-            let imgViewWidth = imgSize.width * scaleY
-            scrollView.maximumZoomScale = scrollView.frame.size.width / imgViewWidth
-            imageView.frame = CGRect(origin: CGPoint(x: scrollView.frame.size.width/2 - imgViewWidth/2, y: 0), size: CGSize(width: imgViewWidth, height: scrollView.frame.size.height))
-        }else {
-            //X先到边缘
-            let imgViewHeight = imgSize.height * scaleX
-            scrollView.maximumZoomScale = scrollView.frame.size.height / imgViewHeight
-            
-            imageView.frame = CGRect(origin: CGPoint(x: 0, y: scrollView.frame.size.height/2 - imgViewHeight/2), size: CGSize(width: scrollView.frame.size.width, height: imgViewHeight))
-        }
-        
-    }
-    
     
     @IBAction func dismissAction(_ sender: UIButton) {
         dismiss(animated: true) { 
@@ -90,29 +58,39 @@ class BigPhotoViewController: UIViewController {
 
 }
 
-extension BigPhotoViewController: UIScrollViewDelegate {
+extension BigPhotoViewController: UICollectionViewDataSource {
     
-    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
-        return imageView
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        guard let datas = testArray else { return 0 }
+        return datas.count
     }
     
-    func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        let boundsSize = scrollView.bounds.size
-        let imgFrame = imageView.frame
-        let contentSize = scrollView.contentSize
-        var centerPoint = CGPoint(x: contentSize.width/2, y: contentSize.height/2)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if imgFrame.size.width <= boundsSize.width {
-            centerPoint.x = boundsSize.width/2
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath)
+        if let cell = cell as? BigPhotoCell {
+            cell.imageView.heroID = "P\(indexPath.row)"
         }
-        
-        if imgFrame.size.height <= boundsSize.height {
-            centerPoint.y = boundsSize.height/2
-        }
-        imageView.center = centerPoint
+        return cell
     }
     
 }
+
+extension BigPhotoViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? BigPhotoCell else { return }
+        guard let datas = testArray else { return }
+        cell.setData(imgUrl: datas[indexPath.row])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        guard let cell = cell as? BigPhotoCell else { return }
+        cell.imageView.kf.cancelDownloadTask()
+    }
+    
+}
+
 
 
 
