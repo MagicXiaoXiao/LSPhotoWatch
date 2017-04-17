@@ -68,8 +68,9 @@ extension BigPhotoViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath)
-        if let cell = cell as? BigPhotoCell {
+        if let cell = cell as? BigPhotoCell, let datas = testArray {
             cell.imageView.heroID = "P\(indexPath.row)"
+            cell.setData(imgUrl: datas[indexPath.row])
         }
         return cell
     }
@@ -78,11 +79,11 @@ extension BigPhotoViewController: UICollectionViewDataSource {
 
 extension BigPhotoViewController: UICollectionViewDelegate {
     
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        guard let cell = cell as? BigPhotoCell else { return }
-        guard let datas = testArray else { return }
-        cell.setData(imgUrl: datas[indexPath.row])
-    }
+//    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+//        guard let cell = cell as? BigPhotoCell else { return }
+//        guard let datas = testArray else { return }
+//        cell.setData(imgUrl: datas[indexPath.row])
+//    }
     
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         guard let cell = cell as? BigPhotoCell else { return }

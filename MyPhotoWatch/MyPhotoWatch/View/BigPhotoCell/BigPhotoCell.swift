@@ -32,6 +32,11 @@ class BigPhotoCell: UICollectionViewCell {
         scrollView.addSubview(imageView)
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        scrollView.contentSize = CGSize(width: imageView.bounds.width, height: scrollView.bounds.height)
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
     }
